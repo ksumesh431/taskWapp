@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+}
+/* textarea { 
+    border-style: none; 
+    border-color: Transparent; 
+    outline: none;        
+  } */
+
+body {
+    margin: 0;
+    background-color: #F3F2F3;
+}
+
+.toolbar {
+    background-color: #343334;
+    height: 5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* .toolbar {
+    background-color: #343334;
+    height: 8rem;
+    
+} */
+
+.colourPicker {
+    background-color: #464446;
+    height: 3.5rem;
+    width: 17rem;
+    margin-left: 100px;
+    /* border:1px solid red; */
+    border-radius: 0.2rem;
+    display: flex;
+
+    
+}
+
+.filter {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border:1px solid red; */
+}
+
+.filter-color {
+    /* border: 1px solid red; */
+    height: 1.3rem;
+    width: 1.6rem;
+    border-radius: 0.3rem;
+}
+
+.pink {
+    background-color: #D795AC;
+}
+
+.blue {
+    background-color: #60CBDF;
+}
+
+.green {
+    background-color: #92E6C8;
+}
+
+.black {
+    background-color: #312F31;
+}
+
+.actions {
+    height: 3.5rem;
+    width: 10rem;
+    margin-left: 100px;
+    /* border:1px solid red; */
+    border-radius: 0.2rem;
+    display: flex;
+    background-color: #464446;
+}
+
+.icon-container {
+    width: 50%;
+    /* border:1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fas {
+    /* border:1px solid red; */
+    text-align: center;
+    font-size: 2.1rem;
+    color: whitesmoke;
+}
+
+.modal_container {
+    position: absolute;
+    height: 28rem;
+    width: 50rem;
+    left: calc(( 100vw - 50rem)/2);
+    top: 30vh;
+    /* border: 1px solid red; */
+    display: flex;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 3);
+}
+
+.input_container {
+    border: 1px solid white;
+    height: 100%;
+    width: 73%;
+}
+
+.modal_input {
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    padding: 5rem;
+    padding-top: 3.5rem;
+    font-family: 'Raleway', sans-serif;
+    line-height: 145%;
+    outline: none;
+    border-width: 0px;
+}
+
+.filter_container {
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #464446;
+}
+
+.filter_container>.filter {
+    height: 17%;
+    width: 43%;
+    /* border: 1px solid red;   */
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    opacity: 1;
+    color: #312F31;
+    font-weight: bold;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    opacity: 1;
+    color: #312F31;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    opacity: 1;
+    color: #312F31;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    opacity: 1;
+    color: #312F31;
+}
+
+.border {
+    border: 0.33rem solid rgb(255, 255, 255);
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.ticket {
+    max-width: 20rem;
+    min-width: 20rem;
+    height: 25vh;
+    margin: 2.5rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    background-color: #FFFEFF;
+}
+[contenteditable] {
+    outline: 0px transparent ;
+}
+.note_area {
+    height: 90%;
+    padding: 2.2rem;
+    padding-top: 0.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    background-color: #ffffff;
+    font-weight: 600;
+    /* margin: 0 auto; */
+    /* border: 1px solid red; */
+    overflow: auto; 
+}
+
+.header {
+    height: 2%;
+    border-top: 0.9rem solid;
+}
+
+.uid {
+    background-color: #FFFEFF;
+    color: #444;
+    margin-bottom: 0.1rem;
+    font-family: 'Encode Sans Semi Expanded', sans-serif;
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    overflow: hidden;
+    opacity:0.4;
+}
+
+
+.active{
+    background-color: #2d2b2b;
+}
+
+
+@media screen and (max-width: 700px) {
+    .toolbar {
+    height: 8rem;
+    flex-direction: column;
+    justify-content: center;
+   }
+    .actions {
+    margin: 0 auto;
+    }
+    .colourPicker {
+    margin: 0 auto;  
+    }
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+    
+  }
