@@ -47,6 +47,21 @@ for (let i = 0; i < colorBtn.length; i++) {
 
 
     })
+    colorBtn[i].addEventListener("dblclick", function (e) {
+        let allTickets = document.querySelectorAll(".ticket");
+        allTickets.forEach(removefn);  //clears screen 
+        function removefn(ticket) {
+            ticket.remove();
+        }
+        if (localStorage.getItem("allTasks")) {
+            arr = JSON.parse(localStorage.getItem("allTasks"));
+
+            for (let i = 0; i < arr.length; i++) {
+                let { uid, text, colour } = arr[i];
+                createTicket(text, colour, false, uid);
+            }
+        }
+    })
 }
 
 plus.addEventListener("click", createModal);
@@ -83,6 +98,9 @@ function handleModal(modal_container) {
     let filters = document.querySelectorAll(".filter_container .filter");
     let textArea = document.querySelector(".modal_input");
 
+
+    textArea.addEventListener("keydown", creation)
+
     for (let i = 0; i < filters.length; i++) {
         filters[i].addEventListener("click", function () {
             filters.forEach((ele) => {
@@ -92,17 +110,17 @@ function handleModal(modal_container) {
             cColor = filters[i].getAttribute("cl");
             // console.log(cColor)
         })
-
     }
-    cColor = "#312F31";
-
-    textArea.addEventListener("keydown", function (obj) {
+    function creation(obj) {
         if (obj.key == "Enter" && textArea.value != "") {
             // console.log("text", textArea.value, "colour", cColor);
             body.removeChild(modal_container);
             createTicket(textArea.value, cColor, true);
         }
-    })
+    }
+    cColor = "#312F31";
+
+
 
 }
 function createTicket(text, colour, flag, id) {
