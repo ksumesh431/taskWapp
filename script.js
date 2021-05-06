@@ -23,22 +23,22 @@ for (let i = 0; i < colorBtn.length; i++) {
     colorBtn[i].addEventListener("click", function (obj) {
         let newColor = colorBtn[i].getAttribute("col");
 
-        let allTickets=document.querySelectorAll(".ticket");
+        let allTickets = document.querySelectorAll(".ticket");
         allTickets.forEach(removefn);  //clears screen 
-        function removefn(ticket){
+        function removefn(ticket) {
             ticket.remove();
         }
-        arr=[];
+        arr = [];
         if (localStorage.getItem("allTasks")) {
             arr = JSON.parse(localStorage.getItem("allTasks"));
 
-            for(let i=0;i<arr.length;i++){
+            for (let i = 0; i < arr.length; i++) {
                 let { uid, text, colour } = arr[i];
-                if(colour==newColor){
+                if (colour == newColor) {
                     createTicket(text, colour, false, uid);
                 }
             }
-        
+
             // for (let i = 0; i < arr.length; i++) {
             //     let { uid, text, colour } = arr[i];
             //     createTicket(text, colour, false, uid);
@@ -144,19 +144,19 @@ function headerClick(e) {
     let i = (idx + 1) % 4;
     rotatingColor = colorArr[i];
 
-    let id=header.parentNode.childNodes[2].innerText.split("#")[1];
+    let id = header.parentNode.childNodes[2].innerText.split("#")[1];
     for (let i = 0; i < arr.length; i++) {
-        let {uid}=arr[i];
+        let { uid } = arr[i];
         // console.log(uid,id)
-        if(id==uid){
-            arr[i].colour=rotatingColor;
-            let newArr=JSON.stringify(arr);
-            localStorage.setItem("allTasks",newArr);
+        if (id == uid) {
+            arr[i].colour = rotatingColor;
+            let newArr = JSON.stringify(arr);
+            localStorage.setItem("allTasks", newArr);
             header.setAttribute("style", `color:${rotatingColor}`);
             break;
         }
     }
-    
+
 
 }
 function manageState(e) {
