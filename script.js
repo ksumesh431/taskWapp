@@ -5,6 +5,7 @@ let cross = document.querySelector(".fa-times");
 let plus = document.querySelector(".pl");
 let crossContainer = document.querySelector(".ex");
 let body = document.body;
+
 let cColor = "#312F31";
 let arr = [];
 let crossState = false;
@@ -80,6 +81,7 @@ function createModal() {
         <div class="filter blue" cl="#60CBDF"></div>
         <div class="filter green" cl="#92E6C8"></div>
         <div class="filter black" cl="#312F31"></div>
+        <i class="fas fa-plus-square"></i>
     </div>`;
 
 
@@ -97,7 +99,7 @@ function handleModal(modal_container) {
 
     let filters = document.querySelectorAll(".filter_container .filter");
     let textArea = document.querySelector(".modal_input");
-
+    let enterBtn=document.querySelector(".fa-plus-square");
 
     textArea.addEventListener("keydown", creation)
 
@@ -118,6 +120,15 @@ function handleModal(modal_container) {
             createTicket(textArea.value, cColor, true);
         }
     }
+    enterBtn.addEventListener("click",function(e){
+        if(textArea.value.trim()==""){
+            alert("Enter some text to create note!");
+        }else{
+            body.removeChild(modal_container);
+            createTicket(textArea.value, cColor, true);
+        }
+    })
+
     cColor = "#312F31";
 
 
@@ -224,3 +235,4 @@ function editTask(e) {
         }
     }
 }
+

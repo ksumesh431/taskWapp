@@ -87,9 +87,18 @@ body {
 .fas {
   /* border:1px solid red; */
   text-align: center;
-  font-size: 2.1rem;
   color: whitesmoke;
 }
+.fa-plus{
+  font-size: 2.1rem;
+}
+.fa-times{
+  font-size: 2.1rem;
+}
+.fa-plus-square{
+  font-size: 3.5rem;
+}
+
 
 .modal_container {
   position: absolute;
@@ -126,7 +135,7 @@ body {
   width: 27%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   padding-top: 3rem;
   padding-bottom: 3rem;
