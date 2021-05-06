@@ -68,6 +68,7 @@ for (let i = 0; i < colorBtn.length; i++) {
 plus.addEventListener("click", createModal);
 crossContainer.addEventListener("click", manageState);
 
+
 function createModal() {
     let arr = document.getElementsByClassName("modal_container");
     if (arr[0] == undefined) {
@@ -94,12 +95,15 @@ function createModal() {
             }
         })
     }
+    else {
+        body.removeChild(arr[0]);
+    }
 }
 function handleModal(modal_container) {
 
     let filters = document.querySelectorAll(".filter_container .filter");
     let textArea = document.querySelector(".modal_input");
-    let enterBtn=document.querySelector(".fa-plus-square");
+    let enterBtn = document.querySelector(".fa-plus-square");
 
     textArea.addEventListener("keydown", creation)
 
@@ -120,10 +124,10 @@ function handleModal(modal_container) {
             createTicket(textArea.value, cColor, true);
         }
     }
-    enterBtn.addEventListener("click",function(e){
-        if(textArea.value.trim()==""){
+    enterBtn.addEventListener("click", function (e) {
+        if (textArea.value.trim() == "") {
             alert("Enter some text to create note!");
-        }else{
+        } else {
             body.removeChild(modal_container);
             createTicket(textArea.value, cColor, true);
         }
@@ -142,7 +146,9 @@ function createTicket(text, colour, flag, id) {
     ticket.innerHTML = `<div class="header" style="color:${colour}">
     </div>
     <h3 class="uid">#${uid}</h3>
-    <div class="note_area" contenteditable="true">${text}</div>`;
+    
+    <div class="note_area" contenteditable="true">${text}</div>
+    <i class="gg-lock"></i>`;
 
     if (flag) {
         let obj = {
