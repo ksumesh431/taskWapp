@@ -89,16 +89,15 @@ body {
   text-align: center;
   color: whitesmoke;
 }
-.fa-plus{
+.fa-plus {
   font-size: 2.1rem;
 }
-.fa-times{
+.fa-times {
   font-size: 2.1rem;
 }
-.fa-plus-square{
+.fa-plus-square {
   font-size: 3.5rem;
 }
-
 
 .modal_container {
   position: absolute;
@@ -109,7 +108,6 @@ body {
   /* border: 1px solid red; */
   display: flex;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 3);
-  
 }
 
 .input_container {
@@ -247,24 +245,20 @@ body {
     align-items: center;
   }
 
-
-
-  .modal_container{
+  .modal_container {
     left: 0;
     /* border: 1px solid red; */
     width: auto;
     display: grid;
-    grid-template:auto 400px/auto;
-    
+    grid-template: auto 400px / auto;
   }
-  .input_container{
+  .input_container {
     width: 100%;
-
   }
-  .modal_input{
+  .modal_input {
   }
   .filter_container {
-    width:100vw;
+    width: 100vw;
     height: 100px;
     display: flex;
     flex-direction: row;
@@ -273,15 +267,62 @@ body {
     /* border: 1px solid red; */
     grid-row: 1;
   }
-  
+
   .filter_container > .filter {
-    max-width:90px;
+    max-width: 90px;
     height: 2.5rem;
-    margin-right:7px;
+    margin-right: 7px;
   }
-  .fa-plus-square{
-    font-size:2.5rem;
+  .fa-plus-square {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .toolbar {
+    height: 8rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .actions {
+    margin: 0 auto;
+  }
+  .colourPicker {
+    margin: 0 auto;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
+  .modal_container {
+    left: 0;
+    border: 1px solid red;
+    width: auto;
+    display: grid;
+    grid-template: auto 400px / auto;
+  }
+  .input_container {
+    width: 100%;
+  }
 
+  .filter_container {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    justify-content: center;
+    /* border: 1px solid red; */
+    grid-row: 1;
+  }
+
+  .filter_container > .filter {
+    max-width: 90px;
+    height: 2.5rem;
+    margin-right: 7px;
+  }
+  .fa-plus-square {
+    font-size: 2.5rem;
+  }
 }
