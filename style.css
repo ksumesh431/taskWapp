@@ -297,7 +297,7 @@ body {
 
   .modal_container {
     left: 0;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: auto;
     display: grid;
     grid-template: auto 400px / auto;
