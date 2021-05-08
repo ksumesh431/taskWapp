@@ -109,6 +109,7 @@ body {
   /* border: 1px solid red; */
   display: flex;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 3);
+  
 }
 
 .input_container {
@@ -252,7 +253,8 @@ body {
     left: 0;
     /* border: 1px solid red; */
     width: auto;
-    display: block;
+    display: grid;
+    grid-template:auto 400px/auto;
     
   }
   .input_container{
@@ -268,6 +270,8 @@ body {
     flex-direction: row;
     padding: 0;
     justify-content: center;
+    /* border: 1px solid red; */
+    grid-row: 1;
   }
   
   .filter_container > .filter {
