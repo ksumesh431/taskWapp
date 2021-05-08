@@ -96,6 +96,12 @@ function createModal() {
                 modal_container.remove();
             }
         })
+        document.addEventListener("backbutton", onBackKeyDown, false);
+        function onBackKeyDown(e) {
+            e.preventDefault();
+            modal_container.remove();
+        }
+
     }
     else {
         body.removeChild(arr[0]);
@@ -197,7 +203,7 @@ function createTicket(text, colour, flag, id) {
                 break;
             }
         }
-        
+
     })
     unlock.addEventListener("click", function () {
         noteBody.contentEditable = "false";
