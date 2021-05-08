@@ -192,12 +192,14 @@ body {
   background-color: #fffeff;
   display: flex;
   flex-direction: column;
+  
 }
 #lock{
   margin-left: 17rem;
   height:2.5rem;
   width: 2.5rem;
-  overflow: hidden;
+  overflow:auto;
+  
 }
 #unlock{
   margin-left: 17rem;
@@ -223,8 +225,9 @@ body {
 }
 
 .header {
-  height: 2%;
+  min-height: 1rem;
   border-top: 0.9rem solid;
+  
 }
 
 .uid {
@@ -237,6 +240,8 @@ body {
   padding-left: 1rem;
   overflow: hidden;
   opacity: 0.4;
+  min-height: 1rem;
+
 }
 
 .active {
