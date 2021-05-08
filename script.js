@@ -151,7 +151,7 @@ function createTicket(text, colour, flag, id) {
     ticket.setAttribute("class", "ticket");
     ticket.innerHTML = `<div class="header" style="color:${colour}">
     </div>
-    <div class="id-Container"><h3 class="uid">#${uid}</h3><img id="unlock" src="https://img.icons8.com/carbon-copy/100/000000/unlock.png"/><img id="lock"src="https://img.icons8.com/carbon-copy/100/000000/lock.png"/></div>
+    <div class="id-Container"><h3 class="uid">#${uid}</h3><img id="unlock" src="https://img.icons8.com/fluent/96/000000/unlock-2.png"/><img id="lock" src="https://img.icons8.com/fluent/96/000000/lock-2.png"/></div>
     
     
     <div class="note_area" contenteditable="false">${text}</div>`;

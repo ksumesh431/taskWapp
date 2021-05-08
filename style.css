@@ -197,16 +197,16 @@ body {
 }
 #lock{
   /* margin-left: 17rem; */
-  height:2.5rem;
-  width: 2.5rem;
+  height:2.1rem;
+  width: 2.1rem;
   overflow:auto;
   /* border: 1px solid red; */
   
 }
 #unlock{
   /* margin-left: 17rem; */
-  height:2.5rem;
-  width: 2.5rem;
+  height:2.1rem;
+  width: 2.1rem;
   display: none;
   overflow: hidden;
 }
@@ -247,7 +247,7 @@ body {
   margin-bottom: 0.1rem;
   font-family: "Encode Sans Semi Expanded", sans-serif;
   font-size: 1rem;
-  margin-top: 0.6rem;
+  margin-top: 0.3rem;
   padding-left: 1rem;
   overflow: hidden;
   opacity: 0.4;
