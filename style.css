@@ -276,6 +276,8 @@ body {
   
   .filter_container > .filter {
     max-width:90px;
+    height: 2.5rem;
+    margin-right:7px;
   }
   .fa-plus-square{
     font-size:2.5rem;
