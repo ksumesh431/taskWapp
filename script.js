@@ -167,10 +167,13 @@ function createTicket(text, colour, flag, id) {
     // noteHeader.addEventListener("click", removeTicket);
     noteBody.addEventListener("click", removeTicket);
     noteBody.addEventListener("keypress", editTask);
+
+
+
     let header = ticket.querySelector(".header");
     header.addEventListener("click", headerClick);
 
-    
+
 
     let lock = ticket.querySelector("#lock");
     let unlock = ticket.querySelector("#unlock");
@@ -179,6 +182,21 @@ function createTicket(text, colour, flag, id) {
         noteBody.contentEditable = "true";
         lock.style.display = "none"
         unlock.style.display = "block";
+    })
+    unlock.addEventListener("click", function () {
+        let id = noteBody.parentNode.childNodes[2].innerText.split("#")[1];
+        for (let i = 0; i < arr.length; i++) {
+            let { uid } = arr[i];
+            // console.log(id,uid);
+            if (id == uid) {
+                arr[i].text = noteBody.innerText;
+                let finalArr = JSON.stringify(arr);
+                localStorage.setItem("allTasks", finalArr);
+
+                break;
+            }
+        }
+        
     })
     unlock.addEventListener("click", function () {
         noteBody.contentEditable = "false";
