@@ -96,11 +96,7 @@ function createModal() {
                 modal_container.remove();
             }
         })
-        document.addEventListener("backbutton", onBackKeyDown, false);
-        function onBackKeyDown(e) {
-            e.preventDefault();
-            modal_container.remove();
-        }
+        
 
     }
     else {
@@ -135,6 +131,8 @@ function handleModal(modal_container) {
     enterBtn.addEventListener("click", function (e) {
         if (textArea.value.trim() == "") {
             alert("Enter some text to create note!");
+            
+
         } else {
             body.removeChild(modal_container);
             createTicket(textArea.value, cColor, true);
@@ -238,6 +236,11 @@ function headerClick(e) {
 
 }
 function manageState(e) {
+
+    if(document.querySelector(".modal_container")){
+        document.querySelector(".modal_container").remove();
+    }
+
     let crossContainer = e.currentTarget;
     if (crossState) {
         crossContainer.classList.remove("active");
