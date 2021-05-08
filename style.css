@@ -180,6 +180,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  
 }
 
 .ticket {
@@ -195,14 +196,15 @@ body {
   
 }
 #lock{
-  margin-left: 17rem;
+  /* margin-left: 17rem; */
   height:2.5rem;
   width: 2.5rem;
   overflow:auto;
+  /* border: 1px solid red; */
   
 }
 #unlock{
-  margin-left: 17rem;
+  /* margin-left: 17rem; */
   height:2.5rem;
   width: 2.5rem;
   display: none;
@@ -210,6 +212,15 @@ body {
 }
 [contenteditable] {
   outline: 0px transparent;
+}
+.id-Container{
+  min-height:2.5rem;
+  max-height:2.5rem;
+  /* border: 1px solid red; */
+  padding: 0;
+  margin:0;
+  display: flex;
+  justify-content:space-between
 }
 .note_area {
   height: 65%;
@@ -236,11 +247,14 @@ body {
   margin-bottom: 0.1rem;
   font-family: "Encode Sans Semi Expanded", sans-serif;
   font-size: 1rem;
-  margin-top: 1rem;
+  margin-top: 0.6rem;
   padding-left: 1rem;
   overflow: hidden;
   opacity: 0.4;
   min-height: 1rem;
+  /* border: 1px solid red; */
+  min-width: 8rem;
+  max-width: 8rem;
 
 }
 
