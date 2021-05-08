@@ -6,6 +6,8 @@ let plus = document.querySelector(".pl");
 let crossContainer = document.querySelector(".ex");
 let body = document.body;
 
+// let editableState=false;
+
 let cColor = "#312F31";
 let arr = [];
 let crossState = false;
@@ -147,8 +149,7 @@ function createTicket(text, colour, flag, id) {
     </div>
     <h3 class="uid">#${uid}</h3>
     
-    <div class="note_area" contenteditable="true">${text}</div>
-    <i class="gg-lock"></i>`;
+    <div class="note_area" contenteditable="false">${text}</div><img id="unlock" src="https://img.icons8.com/carbon-copy/100/000000/unlock.png"/><img id="lock"src="https://img.icons8.com/carbon-copy/100/000000/lock.png"/>`;
 
     if (flag) {
         let obj = {
@@ -168,6 +169,23 @@ function createTicket(text, colour, flag, id) {
     noteBody.addEventListener("keypress", editTask);
     let header = ticket.querySelector(".header");
     header.addEventListener("click", headerClick);
+
+    
+
+    let lock = ticket.querySelector("#lock");
+    let unlock = ticket.querySelector("#unlock");
+    // unlock.style.display="none";
+    lock.addEventListener("click", function () {
+        noteBody.contentEditable = "true";
+        lock.style.display = "none"
+        unlock.style.display = "block";
+    })
+    unlock.addEventListener("click", function () {
+        noteBody.contentEditable = "false";
+        unlock.style.display = "none"
+        lock.style.display = "block";
+    })
+
 
 
 }
