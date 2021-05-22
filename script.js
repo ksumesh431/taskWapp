@@ -96,7 +96,7 @@ function createModal() {
                 modal_container.remove();
             }
         })
-        
+
 
     }
     else {
@@ -131,7 +131,7 @@ function handleModal(modal_container) {
     enterBtn.addEventListener("click", function (e) {
         if (textArea.value.trim() == "") {
             alert("Enter some text to create note!");
-            
+
 
         } else {
             body.removeChild(modal_container);
@@ -237,7 +237,7 @@ function headerClick(e) {
 }
 function manageState(e) {
 
-    if(document.querySelector(".modal_container")){
+    if (document.querySelector(".modal_container")) {
         document.querySelector(".modal_container").remove();
     }
 

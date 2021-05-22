@@ -13,11 +13,13 @@ body {
 }
 
 .toolbar {
-  background-color: #333333;
+  /* background-color: #333333; */
   height: 5rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  
 }
 /* .toolbar {
     background-color: #343334;
@@ -33,6 +35,9 @@ body {
   /* border:1px solid red; */
   border-radius: 0.2rem;
   display: flex;
+  /* background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%); */
+  
+  
 }
 
 .filter {
@@ -74,6 +79,7 @@ body {
   border-radius: 0.2rem;
   display: flex;
   background-color: #464446;
+  background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
 }
 
 .icon-container {
@@ -91,9 +97,11 @@ body {
 }
 .fa-plus {
   font-size: 2.1rem;
+  color: #2d2b2b;
 }
 .fa-times {
   font-size: 2.1rem;
+  color: #2d2b2b;
 }
 .fa-plus-square {
   font-size: 3.5rem;
