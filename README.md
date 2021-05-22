@@ -7,7 +7,7 @@
 
 ## DEMO
 ![Alt Text](demo.gif) 
-##  .
-##  .
+
+
 ## Fully Responsive
 ![Alt Text](responsive.png)
