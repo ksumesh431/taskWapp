@@ -11,6 +11,20 @@ body {
   margin: 0;
   background-color: #f3f2f3;
   /* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
+  overflow: auto;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #4e4e4e;
+  border-radius: 0px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #ffffff7a;
+  border-radius: 12px;
 }
 
 .toolbar {
@@ -248,15 +262,16 @@ body {
 }
 
 .ticket {
-  max-width: 20rem;
   min-width: 20rem;
   min-height: 25vh;
+  max-height: 25vh;
   /* border: 1px solid red; */
   margin: 2.5rem;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   background-color: #fffeff;
   display: flex;
   flex-direction: column;
+  max-width: 20rem;
 }
 #lock {
   /* margin-left: 17rem; */
@@ -295,7 +310,7 @@ body {
   justify-content: space-between;
 }
 .note_area {
-  height: 65%;
+  max-height: 65%;
   padding: 2.2rem;
   padding-top: 0.5rem;
   font-family: "Raleway", sans-serif;
@@ -305,6 +320,19 @@ body {
   /* margin: 0 auto; */
   /* border: 1px solid rgb(55, 0, 255); */
   overflow: auto;
+}
+.note_area::-webkit-scrollbar {
+  width: 8px;
+}
+
+.note_area::-webkit-scrollbar-track {
+  background: #ffffff00;
+  border-radius: 12px;
+}
+
+.note_area::-webkit-scrollbar-thumb {
+  background: #0000000c;
+  border-radius: 12px;
 }
 
 .header {
