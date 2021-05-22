@@ -122,13 +122,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 }
 
 .fas {
   /* border:1px solid red; */
   text-align: center;
   color: whitesmoke;
+  cursor: pointer;
 }
 .fa-plus {
   font-size: 2.1rem;
@@ -363,6 +363,23 @@ body {
   .input_container {
     width: 100%;
   }
+  .filter-color {
+    cursor: default;
+  }
+  .fa-times {
+    font-size: 2.1rem;
+    color: #000000;
+    cursor: default;
+  }
+  .header {
+    cursor: default;
+  }
+  #lock {
+    cursor: default;
+  }
+  #unlock {
+    cursor: default;
+  }
 
   .filter_container {
     width: 100vw;
@@ -379,6 +396,7 @@ body {
     max-width: 90px;
     height: 2.5rem;
     margin-right: 7px;
+    cursor: default;
   }
   .fa-plus-square {
     font-size: 2.5rem;
@@ -402,7 +420,23 @@ body {
     flex-direction: column;
     align-items: center;
   }
-
+  .filter-color {
+    cursor: default;
+  }
+  .fa-times {
+    font-size: 2.1rem;
+    color: #000000;
+    cursor: default;
+  }
+  .header {
+    cursor: default;
+  }
+  #lock {
+    cursor: default;
+  }
+  #unlock {
+    cursor: default;
+  }
   .modal_container {
     left: 0;
     /* border: 1px solid red; */
@@ -429,6 +463,7 @@ body {
     max-width: 90px;
     height: 2.5rem;
     margin-right: 7px;
+    cursor: default;
   }
   .fa-plus-square {
     font-size: 2.5rem;
