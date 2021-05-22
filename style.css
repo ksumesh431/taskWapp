@@ -94,7 +94,6 @@ body {
   cursor: pointer;
 }
 
-
 .fas {
   /* border:1px solid red; */
   text-align: center;
@@ -224,6 +223,10 @@ body {
   cursor: pointer;
   /* border: 1px solid red; */
 }
+#lock:hover {
+  animation: zoom-in-locks 0.4s ease;
+  animation-fill-mode: forwards;
+}
 #unlock {
   /* margin-left: 17rem; */
   height: 2.1rem;
@@ -231,6 +234,10 @@ body {
   display: none;
   overflow: hidden;
   cursor: pointer;
+}
+#unlock:hover {
+  animation: zoom-in-locks 0.4s ease;
+  animation-fill-mode: forwards;
 }
 [contenteditable] {
   outline: 0px transparent;
@@ -401,5 +408,13 @@ body {
   }
   100% {
     transform: scale(1.2, 1.2);
+  }
+}
+@keyframes zoom-in-locks {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1.1, 1.1);
   }
 }
