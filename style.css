@@ -92,12 +92,8 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: 0.3s all ease-in-out;
 }
-.icon-container:hover {
-  background: rgba(0, 0, 0, 0.445);
-  color: #fff;
-}
+
 
 .fas {
   /* border:1px solid red; */
