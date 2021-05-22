@@ -9,7 +9,8 @@
 
 body {
   margin: 0;
-  background-color: #f3f2f3;
+  /* background-color: #f3f2f3; */
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 .toolbar {
@@ -194,7 +195,7 @@ body {
 .ticket {
   max-width: 20rem;
   min-width: 20rem;
-  height: 25vh;
+  min-height: 25vh;
   /* border: 1px solid red; */
   margin: 2.5rem;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
