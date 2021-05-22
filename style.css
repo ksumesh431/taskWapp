@@ -79,7 +79,7 @@ body {
   border-radius: 0.2rem;
   display: flex;
   background-color: #464446;
-  background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+  /* background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%); */
 }
 
 .icon-container {
@@ -97,11 +97,11 @@ body {
 }
 .fa-plus {
   font-size: 2.1rem;
-  color: #2d2b2b;
+  /* color: #2d2b2b; */
 }
 .fa-times {
   font-size: 2.1rem;
-  color: #2d2b2b;
+  /* color: #2d2b2b; */
 }
 .fa-plus-square {
   font-size: 3.5rem;
