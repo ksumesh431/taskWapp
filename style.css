@@ -268,10 +268,10 @@ body::-webkit-scrollbar-thumb {
 
 .ticket {
   min-width: 20rem;
-  min-height: 11rem;
-  max-height: 11rem;
+  min-height: 13rem;
+  max-height: 13rem;
   /* border: 1px solid red; */
-  margin: 2.5rem;
+  margin: 2rem;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   background-color: #fffeff;
   display: flex;
