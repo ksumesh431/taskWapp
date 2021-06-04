@@ -6,9 +6,9 @@
 
 
 ## DEMO
-![Alt Text](demo.gif) 
+![Alt Text](images/demo.gif) 
 * Check out LIVE Demo at https://ksumesh431.github.io/taskWapp
 
 
 ## Fully Responsive
-![Alt Text](responsive.png)
+![Alt Text](images/responsive.png)
