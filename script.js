@@ -221,8 +221,9 @@ function createTicket(text, colour, flag, id) {
         lock.style.display = "block";
     })
 
-
-
+} catch (e) {
+    console.error("Error in ticket creation/rendering:", e);
+}
 }
 function headerClick(e) {
     let header = e.currentTarget;
@@ -299,5 +300,3 @@ function editTask(e) {
         }
     }
 }
-
-
