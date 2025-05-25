@@ -73,7 +73,7 @@ crossContainer.addEventListener("click", manageState);
 
 function createModal() {
     let arr = document.getElementsByClassName("modal_container");
-    if (arr[0] == undefined) {
+    if (document.getElementsByClassName("modal_container")[0] == undefined) {
         let modal_container = document.createElement("div");
         modal_container.setAttribute("class", "modal_container");
         modal_container.innerHTML = `<div class="input_container">
@@ -145,11 +145,23 @@ function handleModal(modal_container) {
 
 }
 function createTicket(text, colour, flag, id) {
-    let uidfn = new ShortUniqueId();
-    let uid = id || uidfn();
-    let ticket = document.createElement("div");
-    ticket.setAttribute("class", "ticket");
-    ticket.innerHTML = `<div class="header" style="color:${colour}">
+    let uid;
+    try {
+        if (typeof ShortUniqueId === 'undefined') {
+            console.error("Error: ShortUniqueId library is not loaded.");
+            return; 
+        }
+        let uidfn = new ShortUniqueId();
+        uid = id || uidfn();
+    } catch (e) {
+        console.error("Error generating UID:", e);
+        return; // Stop if UID generation fails
+    }
+    
+    try {
+        let ticket = document.createElement("div");
+        ticket.setAttribute("class", "ticket");
+        ticket.innerHTML = `<div class="header" style="color:${colour}">
     </div>
     <div class="id-Container"><h3 class="uid">#${uid}</h3><img id="unlock" alt="unlock" src="images/lock2.png"/><img id="lock" alt="lock" src="images/lock.png"/></div>
     
