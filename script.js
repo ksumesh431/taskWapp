@@ -152,7 +152,7 @@ function createTicket(text, colour, flag, id) {
             return; 
         }
         let uidfn = new ShortUniqueId();
-        uid = id || uidfn();
+        uid = id || uidfn.uuid(); // <-- THIS LINE IS CHANGED
     } catch (e) {
         console.error("Error generating UID:", e);
         return; // Stop if UID generation fails
